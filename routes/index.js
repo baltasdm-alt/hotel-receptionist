@@ -7,7 +7,7 @@ const anthropic = new Anthropic({
   apiKey: process.env.ANTHROPIC_API_KEY,
 });
 
-// Force UTF-8
+// UTF-8 fix
 router.use((req, res, next) => {
   res.setHeader('Content-Type', 'application/json; charset=utf-8');
   next();
@@ -52,7 +52,7 @@ Keep answers short and clear.
 `;
 
     const response = await anthropic.messages.create({
-      model: "claude-3-5-sonnet-20241022",
+      model: "claude-3-sonnet-20240229", // ✅ FIXED MODEL
       max_tokens: 300,
       system: systemPrompt,
       messages: [
