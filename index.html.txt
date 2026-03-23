@@ -1,67 +1,111 @@
 <!DOCTYPE html>
 <html lang="el">
 <head>
-  <meta charset="UTF-8">
-  <title>Hotel Receptionist</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hotel AI Receptionist</title>
   <style>
     body {
-      font-family: Arial;
-      max-width: 600px;
-      margin: 40px auto;
-      padding: 10px;
+      font-family: Arial, sans-serif;
+      max-width: 720px;
+      margin: 30px auto;
+      padding: 16px;
+      background: #f7f7f7;
+    }
+    h2 {
+      margin-bottom: 16px;
     }
     #chat {
-      border: 1px solid #ccc;
-      padding: 10px;
-      height: 400px;
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      padding: 16px;
+      height: 420px;
       overflow-y: auto;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
-    .user { color: blue; }
-    .bot { color: green; }
+    .msg {
+      margin-bottom: 12px;
+      line-height: 1.4;
+    }
+    .user {
+      color: #0b57d0;
+    }
+    .bot {
+      color: #198754;
+    }
+    .row {
+      display: flex;
+      gap: 8px;
+    }
+    input {
+      flex: 1;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      font-size: 16px;
+    }
+    button {
+      padding: 12px 16px;
+      border: 0;
+      border-radius: 10px;
+      background: black;
+      color: white;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
+  <h2>Hotel AI Receptionist</h2>
+  <div id="chat"></div>
 
-<h2>Hotel AI Receptionist</h2>
+  <div class="row">
+    <input id="message" placeholder="Γράψε μήνυμα..." />
+    <button onclick="sendMessage()">Send</button>
+  </div>
 
-<div id="chat"></div>
+  <script>
+    let sessionId = "session-" + Math.random().toString(36).slice(2);
+    const chat = document.getElementById("chat");
+    const input = document.getElementById("message");
 
-<input id="input" placeholder="Γράψε μήνυμα..." style="width:80%">
-<button onclick="send()">Send</button>
+    function addMessage(text, cls) {
+      const div = document.createElement("div");
+      div.className = "msg " + cls;
+      div.textContent = text;
+      chat.appendChild(div);
+      chat.scrollTop = chat.scrollHeight;
+    }
 
-<script>
-let sessionId = "test-session";
+    async function sendMessage() {
+      const text = input.value.trim();
+      if (!text) return;
 
-function addMessage(text, className) {
-  const div = document.createElement("div");
-  div.className = className;
-  div.innerText = text;
-  document.getElementById("chat").appendChild(div);
-}
+      addMessage("Εσύ: " + text, "user");
+      input.value = "";
 
-async function send() {
-  const input = document.getElementById("input");
-  const message = input.value;
+      try {
+        const res = await fetch("/test-chat", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            message: text,
+            sessionId
+          })
+        });
 
-  addMessage("Εσύ: " + message, "user");
+        const data = await res.json();
+        addMessage("Reception: " + (data.reply || "Δεν υπάρχει απάντηση"), "bot");
+      } catch (err) {
+        addMessage("Σφάλμα σύνδεσης με το backend.", "bot");
+      }
+    }
 
-  const res = await fetch("/test-chat", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      message,
-      sessionId
-    })
-  });
+    input.addEventListener("keydown", function(e) {
+      if (e.key === "Enter") sendMessage();
+    });
 
-  const data = await res.json();
-
-  addMessage("Reception: " + data.reply, "bot");
-
-  input.value = "";
-}
-</script>
-
+    addMessage("Reception: Καλησπέρα σας. Πώς μπορώ να σας βοηθήσω;", "bot");
+  </script>
 </body>
 </html>
