@@ -7,7 +7,7 @@ const anthropic = new Anthropic({
   apiKey: process.env.ANTHROPIC_API_KEY,
 });
 
-// UTF-8 fix
+// UTF-8
 router.use((req, res, next) => {
   res.setHeader('Content-Type', 'application/json; charset=utf-8');
   next();
@@ -21,12 +21,12 @@ router.get('/health', (req, res) => {
   });
 });
 
-// AI Chat (Claude)
+// AI Chat
 router.post('/test-chat', async (req, res) => {
   try {
-    const { message } = req.body;
+    const { message } = req.body || {};
 
-    if (!message) {
+    if (!message || !message.trim()) {
       return res.status(400).json({
         reply: 'Δεν έλαβα μήνυμα.'
       });
@@ -42,6 +42,8 @@ Your role:
 - Ask smart follow-up questions
 - Ask ONE question at a time
 - Do NOT repeat what the guest already said
+- Reply in Greek if the guest writes in Greek
+- Reply in English if the guest writes in English
 
 Tone:
 - Elegant
@@ -52,7 +54,7 @@ Keep answers short and clear.
 `;
 
     const response = await anthropic.messages.create({
-      model: "claude-3-sonnet-20240229", // ✅ FIXED MODEL
+      model: "claude-sonnet-4-6",
       max_tokens: 300,
       system: systemPrompt,
       messages: [
@@ -63,13 +65,18 @@ Keep answers short and clear.
       ]
     });
 
-    const reply = response.content[0].text;
+    const reply =
+      response.content
+        ?.filter(block => block.type === 'text')
+        .map(block => block.text)
+        .join('\n')
+        .trim() || 'Δεν έχω απάντηση αυτή τη στιγμή.';
 
-    res.json({ reply });
+    return res.json({ reply });
 
   } catch (error) {
     console.error('Claude error:', error);
-    res.status(500).json({
+    return res.status(500).json({
       reply: 'Υπήρξε ένα προσωρινό σφάλμα. Δοκιμάστε ξανά.'
     });
   }
