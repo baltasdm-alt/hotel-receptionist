@@ -1,0 +1,265 @@
+{
+  "rooms": [
+    {
+      "id": "STD-SV",
+      "type": "Standard Room – Sea View",
+      "shortName": "Standard Sea View",
+      "category": "standard",
+      "totalUnits": 20,
+      "maxAdults": 2,
+      "maxChildren": 1,
+      "maxOccupancy": 3,
+      "sizeSqm": 28,
+      "bedOptions": ["1 king bed", "2 twin beds"],
+      "floor": "1st–3rd floor",
+      "view": "Sea view",
+      "basePrice": {
+        "lowSeason": 110,
+        "midSeason": 155,
+        "highSeason": 210
+      },
+      "breakfastIncluded": true,
+      "amenities": [
+        "Air conditioning",
+        "Free WiFi",
+        "Flat-screen TV",
+        "Private bathroom",
+        "Hairdryer",
+        "Safe",
+        "Mini fridge",
+        "Balcony with sea view"
+      ],
+      "description": "A comfortable room with a private balcony overlooking the Aegean Sea. Perfect for couples or solo travelers seeking a relaxing retreat.",
+      "suitableFor": ["couples", "solo travelers"]
+    },
+    {
+      "id": "FAM-GV",
+      "type": "Family Room – Garden View",
+      "shortName": "Family Garden View",
+      "category": "family",
+      "totalUnits": 15,
+      "maxAdults": 2,
+      "maxChildren": 2,
+      "maxOccupancy": 4,
+      "sizeSqm": 38,
+      "bedOptions": ["1 king bed + 2 single beds"],
+      "floor": "Ground–2nd floor",
+      "view": "Garden and pool view",
+      "basePrice": {
+        "lowSeason": 150,
+        "midSeason": 205,
+        "highSeason": 270
+      },
+      "breakfastIncluded": true,
+      "amenities": [
+        "Air conditioning",
+        "Free WiFi",
+        "Flat-screen TV",
+        "Private bathroom",
+        "Hairdryer",
+        "Safe",
+        "Mini fridge",
+        "Terrace or balcony",
+        "Children's welcome kit",
+        "Cot available on request"
+      ],
+      "description": "Spacious family room with dedicated children's sleeping area. Ground floor units have direct terrace access to the garden and pool area.",
+      "suitableFor": ["families with young children", "families with teenagers"]
+    },
+    {
+      "id": "FAM-SV",
+      "type": "Family Room – Sea View",
+      "shortName": "Family Sea View",
+      "category": "family",
+      "totalUnits": 10,
+      "maxAdults": 2,
+      "maxChildren": 2,
+      "maxOccupancy": 4,
+      "sizeSqm": 40,
+      "bedOptions": ["1 king bed + 2 single beds"],
+      "floor": "2nd–4th floor",
+      "view": "Panoramic sea view",
+      "basePrice": {
+        "lowSeason": 175,
+        "midSeason": 240,
+        "highSeason": 320
+      },
+      "breakfastIncluded": true,
+      "amenities": [
+        "Air conditioning",
+        "Free WiFi",
+        "Flat-screen TV",
+        "Private bathroom with bathtub",
+        "Hairdryer",
+        "Safe",
+        "Mini fridge",
+        "Large balcony with sea view",
+        "Children's welcome kit",
+        "Cot available on request"
+      ],
+      "description": "Our most popular family room with stunning panoramic sea views. Spacious layout with a separate sleeping nook for kids and a large balcony to enjoy sunsets as a family.",
+      "suitableFor": ["families", "special occasions"]
+    },
+    {
+      "id": "SUP-SV",
+      "type": "Superior Room – Sea View",
+      "shortName": "Superior Sea View",
+      "category": "superior",
+      "totalUnits": 12,
+      "maxAdults": 2,
+      "maxChildren": 1,
+      "maxOccupancy": 3,
+      "sizeSqm": 35,
+      "bedOptions": ["1 king bed"],
+      "floor": "3rd–5th floor",
+      "view": "Full sea view",
+      "basePrice": {
+        "lowSeason": 145,
+        "midSeason": 200,
+        "highSeason": 265
+      },
+      "breakfastIncluded": true,
+      "amenities": [
+        "Air conditioning",
+        "Free WiFi",
+        "55-inch flat-screen TV",
+        "Private bathroom with walk-in shower",
+        "Hairdryer",
+        "In-room safe",
+        "Mini bar",
+        "Nespresso machine",
+        "Large balcony with sun loungers",
+        "Pillow menu",
+        "Welcome fruit basket"
+      ],
+      "description": "Elevated comfort with premium furnishings and a generous balcony facing the sea. Features upgraded amenities including a Nespresso machine and pillow menu.",
+      "suitableFor": ["couples", "honeymoon", "special occasions"]
+    },
+    {
+      "id": "JR-STE",
+      "type": "Junior Suite – Sea View",
+      "shortName": "Junior Suite",
+      "category": "suite",
+      "totalUnits": 6,
+      "maxAdults": 2,
+      "maxChildren": 2,
+      "maxOccupancy": 4,
+      "sizeSqm": 55,
+      "bedOptions": ["1 king bed", "sofa bed for 2 children"],
+      "floor": "4th–5th floor",
+      "view": "Panoramic sea and coastline view",
+      "basePrice": {
+        "lowSeason": 220,
+        "midSeason": 310,
+        "highSeason": 420
+      },
+      "breakfastIncluded": true,
+      "amenities": [
+        "Air conditioning",
+        "Free WiFi",
+        "55-inch flat-screen TV",
+        "Separate living area",
+        "Private bathroom with jacuzzi bathtub",
+        "Walk-in shower",
+        "Hairdryer",
+        "In-room safe",
+        "Full mini bar",
+        "Nespresso machine",
+        "Extra-large terrace with sea view",
+        "Welcome bottle of wine",
+        "Daily fresh fruit",
+        "Turndown service",
+        "Priority spa booking"
+      ],
+      "description": "A luxurious junior suite with separate living area and oversized terrace. The jacuzzi bathtub and panoramic views make this an unforgettable stay.",
+      "suitableFor": ["honeymoon", "anniversaries", "families wanting extra space", "luxury travelers"]
+    },
+    {
+      "id": "PRES-STE",
+      "type": "Presidential Suite",
+      "shortName": "Presidential Suite",
+      "category": "suite",
+      "totalUnits": 2,
+      "maxAdults": 4,
+      "maxChildren": 2,
+      "maxOccupancy": 6,
+      "sizeSqm": 90,
+      "bedOptions": ["1 king bed", "1 queen bed in second bedroom"],
+      "floor": "5th floor (top floor)",
+      "view": "360° sea and sunset view",
+      "basePrice": {
+        "lowSeason": 380,
+        "midSeason": 520,
+        "highSeason": 720
+      },
+      "breakfastIncluded": true,
+      "amenities": [
+        "Air conditioning",
+        "Free WiFi",
+        "Two 65-inch flat-screen TVs",
+        "Two separate bedrooms",
+        "Two private bathrooms",
+        "Jacuzzi on private terrace",
+        "Full kitchen with dining area",
+        "In-room safe",
+        "Full stocked mini bar (complimentary)",
+        "Nespresso and tea station",
+        "Private wrap-around terrace",
+        "Welcome champagne and fresh flowers",
+        "Daily fresh fruit and pastries",
+        "Butler service on request",
+        "Turndown service",
+        "Priority restaurant reservations",
+        "Complimentary airport transfer"
+      ],
+      "description": "Our crown jewel. The Presidential Suite occupies the entire top floor with sweeping 360-degree views. Ideal for families, celebrations, or those who simply want the best.",
+      "suitableFor": ["luxury travelers", "large families", "celebrations", "VIP guests"]
+    }
+  ],
+  "seasons": {
+    "low": {
+      "label": "Low Season",
+      "months": [1, 2, 3, 10, 11, 12],
+      "description": "October to March"
+    },
+    "mid": {
+      "label": "Mid Season",
+      "months": [4, 5, 9],
+      "description": "April, May, September"
+    },
+    "high": {
+      "label": "High Season",
+      "months": [6, 7, 8],
+      "description": "June, July, August"
+    }
+  },
+  "mockAvailability": {
+    "note": "This is a mock availability system. In production, connect to your PMS (Property Management System).",
+    "defaultAvailablePercentage": 0.7,
+    "fullyBookedDates": [
+      "2025-08-01",
+      "2025-08-02",
+      "2025-08-03",
+      "2025-08-15",
+      "2025-08-16"
+    ],
+    "limitedAvailabilityDates": [
+      "2025-07-25",
+      "2025-07-26",
+      "2025-07-27"
+    ]
+  },
+  "childPolicy": {
+    "freeAgeLimit": 3,
+    "reducedRateAgeLimit": 12,
+    "childReductionPercent": 50,
+    "infantCotFree": true
+  },
+  "additionalFees": {
+    "extraBed": 35,
+    "cotBaby": 0,
+    "earlyCheckin": 30,
+    "lateCheckout": 40,
+    "cityTaxPerPersonPerNight": 3.5
+  }
+}

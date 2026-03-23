@@ -1,0 +1,77 @@
+{
+  "cancellation": {
+    "standard": {
+      "policy": "Free cancellation up to 5 days before check-in.",
+      "lateCancellation": "Cancellations within 5 days of check-in incur a charge equal to the first night's stay.",
+      "noShow": "No-shows are charged the full booking amount."
+    },
+    "nonRefundable": {
+      "policy": "Non-refundable rates are fully charged at booking and cannot be cancelled or modified.",
+      "note": "Non-refundable rates offer a discount of approximately 15–20% vs. standard rates."
+    },
+    "highSeason": {
+      "policy": "During July and August, free cancellation is available up to 14 days before check-in.",
+      "lateCancellation": "Cancellations within 14 days during July–August incur a charge of 2 nights' stay."
+    }
+  },
+  "payment": {
+    "acceptedMethods": ["Visa", "Mastercard", "American Express", "Cash (EUR)"],
+    "depositPolicy": "A valid credit card is required at check-in. No charge is made at booking for standard rates.",
+    "currencyAtProperty": "EUR (Euro)",
+    "paymentAtCheckIn": "The full amount is charged at check-in unless a pre-payment arrangement was made."
+  },
+  "checkIn": {
+    "time": "15:00",
+    "earliestPossible": "Depending on availability — we'll do our best to accommodate early arrivals.",
+    "earlyCheckinFee": "€30 if room is ready before 12:00",
+    "idRequired": "Valid passport or ID is required for all guests at check-in.",
+    "minAge": "The main guest must be at least 18 years old."
+  },
+  "checkOut": {
+    "time": "11:00",
+    "latestPossible": "13:00 subject to availability",
+    "lateCheckoutFee": "€40 for check-out between 11:00 and 13:00. After 13:00 charged as an additional night."
+  },
+  "children": {
+    "freeStay": "Children 0–3 years stay free in existing bedding.",
+    "reducedRate": "Children 4–12 years receive a 50% discount on the room rate when sharing with parents.",
+    "teenagersAdults": "Guests 13 and above are considered adults for pricing purposes.",
+    "cots": "Baby cots are available free of charge on request — please inform us at booking.",
+    "kidsClub": "Free access for all hotel guests aged 3–12 years."
+  },
+  "pets": {
+    "allowed": false,
+    "reason": "To ensure the comfort and safety of all guests, including those with allergies, we maintain a strict no-pets policy."
+  },
+  "smoking": {
+    "policy": "The entire property is non-smoking, including all rooms, balconies, and indoor common areas.",
+    "smokingArea": "A designated outdoor smoking area is available near the main entrance.",
+    "fee": "A deep-cleaning fee of €150 applies if smoking is detected in a room."
+  },
+  "damage": {
+    "policy": "Guests are responsible for any damage caused to hotel property. Charges will be applied to the credit card on file."
+  },
+  "quietHours": {
+    "hours": "23:00–08:00",
+    "policy": "We kindly ask all guests to respect quiet hours for the comfort of everyone."
+  },
+  "pools": {
+    "hours": "08:00–20:00",
+    "supervision": "Not a lifeguard-supervised pool. Children must be accompanied by an adult at all times.",
+    "dressCode": "Appropriate swimwear required. No shorts, cut-offs, or underwear in the pool."
+  },
+  "disability": {
+    "accessible": true,
+    "features": ["Ground floor accessible rooms", "Ramp access throughout", "Elevator to all floors", "Adapted bathroom available on request"],
+    "note": "Please inform us of any accessibility requirements at booking."
+  },
+  "groups": {
+    "definition": "Groups of 8 or more rooms",
+    "policy": "Group bookings require a separate contract and deposit. Please contact our reservations team directly.",
+    "contact": "groups@villaeleni.gr"
+  },
+  "taxesAndFees": {
+    "cityTax": "€3.50 per person per night (Greek accommodation tax, paid at check-in, exempt for children under 12).",
+    "vatIncluded": "All displayed prices include 13% VAT."
+  }
+}

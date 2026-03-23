@@ -1,0 +1,146 @@
+{
+  "name": "Villa Eleni Beach Hotel",
+  "stars": 4,
+  "tagline": "Where Greek hospitality meets the Aegean breeze",
+  "location": {
+    "address": "Agiou Nikolaou 12, Halkidiki 63080, Greece",
+    "region": "Halkidiki, Northern Greece",
+    "nearestAirport": "Thessaloniki International Airport (SKG)",
+    "distanceFromAirport": "85 km",
+    "distanceFromBeach": "50 meters (direct beach access)"
+  },
+  "contact": {
+    "phone": "+30 23740 12345",
+    "email": "info@villaeleni.gr",
+    "website": "www.villaeleni.gr"
+  },
+  "checkInTime": "15:00",
+  "checkOutTime": "11:00",
+  "reception": "24 hours",
+  "languages": ["Greek", "English", "German", "French"],
+  "facilities": {
+    "pool": {
+      "outdoor": true,
+      "indoor": false,
+      "description": "Large outdoor pool with sea view and children's shallow pool",
+      "hours": "08:00–20:00"
+    },
+    "beach": {
+      "private": true,
+      "description": "Private sandy beach with sunbeds and umbrellas (complimentary)",
+      "waterSports": ["paddleboarding", "kayaking", "snorkeling equipment rental"]
+    },
+    "restaurant": {
+      "name": "Taverna Eleni",
+      "description": "Main restaurant serving Mediterranean and traditional Greek cuisine",
+      "hours": "07:30–22:30"
+    },
+    "bar": {
+      "name": "Aegean Sunset Bar",
+      "description": "Pool and beach bar with cocktails, snacks, and stunning views",
+      "hours": "10:00–00:00"
+    },
+    "spa": {
+      "available": true,
+      "name": "Blue Serenity Spa",
+      "services": ["massages", "facials", "hydrotherapy", "body treatments"],
+      "hours": "10:00–20:00",
+      "booking": "Advance booking recommended"
+    },
+    "fitness": {
+      "available": true,
+      "hours": "07:00–22:00",
+      "equipment": "Modern cardio and strength equipment"
+    },
+    "kidsClub": {
+      "available": true,
+      "name": "Little Eleni Kids Club",
+      "ageRange": "3–12 years",
+      "hours": "09:00–18:00",
+      "description": "Supervised activities, games, and crafts for children"
+    },
+    "parking": {
+      "available": true,
+      "type": "Free on-site parking",
+      "spaces": 60,
+      "reservation": "Not required, first come first served"
+    },
+    "wifi": {
+      "available": true,
+      "coverage": "All rooms and common areas",
+      "cost": "Free"
+    },
+    "airConditioning": true,
+    "elevator": true,
+    "luggageStorage": true,
+    "currencyExchange": true,
+    "tourDesk": true,
+    "roomService": {
+      "available": true,
+      "hours": "07:00–23:00"
+    }
+  },
+  "breakfast": {
+    "type": "Buffet breakfast",
+    "included": "In most room types — confirm per rate",
+    "hours": "07:30–10:30",
+    "location": "Taverna Eleni",
+    "description": "Traditional Greek and international buffet with fresh local produce, pastries, eggs station, cold cuts, cheeses, yogurt, and fruit"
+  },
+  "transfers": {
+    "airportTransfer": {
+      "available": true,
+      "from": "Thessaloniki Airport (SKG)",
+      "price": "€85 one way (up to 4 guests), €110 for minivan (up to 8 guests)",
+      "booking": "Must be booked at least 24 hours in advance"
+    },
+    "taxiArrangement": true,
+    "carRental": "Available via our tour desk"
+  },
+  "pets": {
+    "allowed": false,
+    "note": "We are a pet-free property to ensure comfort for all guests"
+  },
+  "smoking": {
+    "policy": "Non-smoking throughout, including rooms and balconies",
+    "smokingArea": "Designated outdoor smoking area near the main entrance"
+  },
+  "familyFriendly": {
+    "babyEquipment": ["cots", "high chairs", "baby bath"],
+    "kidsMenu": true,
+    "babysitting": {
+      "available": true,
+      "note": "Available on request with 24-hour advance notice, additional charge applies"
+    }
+  },
+  "faq": [
+    {
+      "q": "Is breakfast included?",
+      "a": "Breakfast is included in most room types. We recommend confirming when booking as it depends on the rate selected."
+    },
+    {
+      "q": "Do you have a children's pool?",
+      "a": "Yes, we have a dedicated shallow children's pool next to the main pool."
+    },
+    {
+      "q": "Is parking free?",
+      "a": "Yes, on-site parking is completely free for all guests. No reservation needed."
+    },
+    {
+      "q": "How far are you from the airport?",
+      "a": "We're about 85 km from Thessaloniki Airport, approximately 1 hour by car. We offer airport transfers starting from €85."
+    },
+    {
+      "q": "Can I request an early check-in?",
+      "a": "Early check-in is subject to availability and may carry an extra charge. Please let us know your arrival time and we'll do our best."
+    },
+    {
+      "q": "Is the beach private?",
+      "a": "Yes, we have our own private sandy beach with complimentary sunbeds and umbrellas for all guests."
+    },
+    {
+      "q": "Do you have a spa?",
+      "a": "Yes! Blue Serenity Spa is open daily 10:00–20:00. We recommend booking treatments in advance."
+    }
+  ]
+}
