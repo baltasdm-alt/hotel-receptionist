@@ -1,6 +1,12 @@
 const express = require('express');
 const router = express.Router();
 
+// Force UTF-8 για σωστά ελληνικά
+router.use((req, res, next) => {
+  res.setHeader('Content-Type', 'application/json; charset=utf-8');
+  next();
+});
+
 // Health check
 router.get('/health', (req, res) => {
   res.json({
@@ -21,7 +27,7 @@ router.post('/test-chat', (req, res) => {
     }
 
     return res.json({
-      reply: `Καταχώρησα το αίτημά σας για "${message}". Θα θέλατε να μου πείτε και τον αριθμό ατόμων;`
+      reply: `Καταχώρησα το αίτημά σας για "${message}". Θα θέλατε να μου πείτε αριθμό ατόμων και τύπο δωματίου;`
     });
   } catch (error) {
     console.error('POST /test-chat error:', error);
