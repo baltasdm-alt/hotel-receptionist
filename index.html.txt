@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <title>Hotel Receptionist</title>
+  <style>
+    body {
+      font-family: Arial;
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 10px;
+    }
+    #chat {
+      border: 1px solid #ccc;
+      padding: 10px;
+      height: 400px;
+      overflow-y: auto;
+      margin-bottom: 10px;
+    }
+    .user { color: blue; }
+    .bot { color: green; }
+  </style>
+</head>
+<body>
+
+<h2>Hotel AI Receptionist</h2>
+
+<div id="chat"></div>
+
+<input id="input" placeholder="Γράψε μήνυμα..." style="width:80%">
+<button onclick="send()">Send</button>
+
+<script>
+let sessionId = "test-session";
+
+function addMessage(text, className) {
+  const div = document.createElement("div");
+  div.className = className;
+  div.innerText = text;
+  document.getElementById("chat").appendChild(div);
+}
+
+async function send() {
+  const input = document.getElementById("input");
+  const message = input.value;
+
+  addMessage("Εσύ: " + message, "user");
+
+  const res = await fetch("/test-chat", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      message,
+      sessionId
+    })
+  });
+
+  const data = await res.json();
+
+  addMessage("Reception: " + data.reply, "bot");
+
+  input.value = "";
+}
+</script>
+
+</body>
+</html>
